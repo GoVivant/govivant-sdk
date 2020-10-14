@@ -1,0 +1,24 @@
+{
+  "name": "govivant-sdk",
+  "version": "1.0.0",
+  "description": "An API client to use GoVivant services",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoVivant/govivant-sdk.git"
+  },
+  "keywords": [
+    "govivant",
+    "sdk",
+    "gvv"
+  ],
+  "author": "Jonata Oliveira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GoVivant/govivant-sdk/issues"
+  },
+  "homepage": "https://github.com/GoVivant/govivant-sdk#readme"
+}
