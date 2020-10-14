@@ -2,7 +2,7 @@
   "name": "govivant-sdk",
   "version": "1.0.0",
   "description": "An API client to use GoVivant services",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "test"
   },
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/GoVivant/govivant-sdk/issues"
   },
-  "homepage": "https://github.com/GoVivant/govivant-sdk#readme"
+  "homepage": "https://github.com/GoVivant/govivant-sdk#readme",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
 }
