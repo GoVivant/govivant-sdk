@@ -15,6 +15,13 @@ export default class ApiUsers {
     view(id: string) {
         return this.api.get(`/users/${id}`)
     }
+    /**
+    * Filter results by any property, through a query.
+    * Ex: { foo: 'bar' }
+    */
+    search(query: object) {
+        return this.api.get(`/users/search?query=${JSON.stringify(query)}`)
+    }
     create(data: User) {
         return this.api.post(`/users`, data)
     }

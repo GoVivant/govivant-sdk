@@ -15,6 +15,13 @@ export default class ApiTransactions {
     view(id: string) {
         return this.api.get(`/transactions/${id}`)
     }
+    /**
+    * Filter results by any property, through a query.
+    * Ex: { foo: 'bar' }
+    */
+    search(query: object) {
+        return this.api.get(`/transactions/search?query=${JSON.stringify(query)}`)
+    }
     create(data: Transaction) {
         return this.api.post(`/transactions`, data)
     }

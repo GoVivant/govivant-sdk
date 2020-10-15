@@ -15,6 +15,13 @@ export default class ApiCities {
     view(id: string) {
         return this.api.get(`/cities/${id}`)
     }
+    /**
+    * Filter results by any property, through a query.
+    * Ex: { foo: 'bar' }
+    */
+    search(query: object) {
+        return this.api.get(`/cities/search?query=${JSON.stringify(query)}`)
+    }
     create(data: City) {
         return this.api.post(`/cities`, data)
     }

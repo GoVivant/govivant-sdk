@@ -15,6 +15,13 @@ export default class ApiRules {
     view(id: string) {
         return this.api.get(`/rules/${id}`)
     }
+    /**
+    * Filter results by any property, through a query.
+    * Ex: { foo: 'bar' }
+    */
+    search(query: object) {
+        return this.api.get(`/rules/search?query=${JSON.stringify(query)}`)
+    }
     create(data: Rule) {
         return this.api.post(`/rules`, data)
     }

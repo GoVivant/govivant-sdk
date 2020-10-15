@@ -1,4 +1,5 @@
 import ApiGvv from './api'
+import ApiAuth from './api/auth'
 import ApiUsers from './api/users'
 import ApiTags from './api/tags'
 import ApiBusinesses from './api/businesses'
@@ -16,6 +17,7 @@ import ApiTransactions from './api/transactions'
 
 export default class Govivant {
 
+    auth: ApiAuth
     users: ApiUsers
     tags: ApiTags
     businesses: ApiBusinesses
@@ -35,6 +37,7 @@ export default class Govivant {
 
         const api_gvv = new ApiGvv(api_key, dev)
 
+        this.auth = new ApiAuth(api_gvv)
         this.users = new ApiUsers(api_gvv)
         this.tags = new ApiTags(api_gvv)
         this.businesses = new ApiBusinesses(api_gvv)

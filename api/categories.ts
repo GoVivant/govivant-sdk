@@ -15,6 +15,13 @@ export default class ApiCategories {
     view(id: string) {
         return this.api.get(`/categories/${id}`)
     }
+    /**
+    * Filter results by any property, through a query.
+    * Ex: { foo: 'bar' }
+    */
+    search(query: object) {
+        return this.api.get(`/categories/search?query=${JSON.stringify(query)}`)
+    }
     create(data: Category) {
         return this.api.post(`/categories`, data)
     }

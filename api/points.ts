@@ -15,6 +15,13 @@ export default class ApiPoints {
     view(id: string) {
         return this.api.get(`/points/${id}`)
     }
+    /**
+    * Filter results by any property, through a query.
+    * Ex: { foo: 'bar' }
+    */
+    search(query: object) {
+        return this.api.get(`/points/search?query=${JSON.stringify(query)}`)
+    }
     create(data: Point) {
         return this.api.post(`/points`, data)
     }

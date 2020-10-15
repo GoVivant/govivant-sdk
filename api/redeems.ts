@@ -15,6 +15,13 @@ export default class ApiRedeems {
     view(id: string) {
         return this.api.get(`/redeems/${id}`)
     }
+    /**
+    * Filter results by any property, through a query.
+    * Ex: { foo: 'bar' }
+    */
+    search(query: object) {
+        return this.api.get(`/redeems/search?query=${JSON.stringify(query)}`)
+    }
     create(data: Redeem) {
         return this.api.post(`/redeems`, data)
     }

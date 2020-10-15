@@ -15,6 +15,13 @@ export default class ApiBusinesses {
     view(id: string) {
         return this.api.get(`/businesses/${id}`)
     }
+    /**
+    * Filter results by any property, through a query.
+    * Ex: { foo: 'bar' }
+    */
+    search(query: object) {
+        return this.api.get(`/businesses/search?query=${JSON.stringify(query)}`)
+    }
     create(data: Business) {
         return this.api.post(`/businesses`, data)
     }

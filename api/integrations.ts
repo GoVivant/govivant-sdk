@@ -15,6 +15,13 @@ export default class ApiIntegrations {
     view(id: string) {
         return this.api.get(`/integrations/${id}`)
     }
+    /**
+    * Filter results by any property, through a query.
+    * Ex: { foo: 'bar' }
+    */
+    search(query: object) {
+        return this.api.get(`/integrations/search?query=${JSON.stringify(query)}`)
+    }
     create(data: Integration) {
         return this.api.post(`/integrations`, data)
     }
