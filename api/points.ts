@@ -20,7 +20,7 @@ export default class ApiPoints {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/points/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/points/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: Point) {
         return this.api.post(`/points`, data)

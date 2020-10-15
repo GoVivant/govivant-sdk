@@ -20,7 +20,7 @@ export default class ApiTags {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/tags/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/tags/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: Tag) {
         return this.api.post(`/tags`, data)

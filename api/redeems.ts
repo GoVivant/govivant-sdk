@@ -20,7 +20,7 @@ export default class ApiRedeems {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/redeems/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/redeems/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: Redeem) {
         return this.api.post(`/redeems`, data)

@@ -20,7 +20,7 @@ export default class ApiProducts {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/products/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/products/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: Product) {
         return this.api.post(`/products`, data)

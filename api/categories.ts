@@ -20,7 +20,7 @@ export default class ApiCategories {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/categories/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/categories/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: Category) {
         return this.api.post(`/categories`, data)

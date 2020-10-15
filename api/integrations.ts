@@ -20,7 +20,7 @@ export default class ApiIntegrations {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/integrations/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/integrations/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: Integration) {
         return this.api.post(`/integrations`, data)

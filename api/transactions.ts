@@ -20,7 +20,7 @@ export default class ApiTransactions {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/transactions/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/transactions/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: Transaction) {
         return this.api.post(`/transactions`, data)

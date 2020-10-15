@@ -20,7 +20,7 @@ export default class ApiBusinesses {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/businesses/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/businesses/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: Business) {
         return this.api.post(`/businesses`, data)

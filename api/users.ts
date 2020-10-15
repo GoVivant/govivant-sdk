@@ -20,7 +20,7 @@ export default class ApiUsers {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/users/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/users/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: User) {
         return this.api.post(`/users`, data)

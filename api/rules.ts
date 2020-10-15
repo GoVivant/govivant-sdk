@@ -20,7 +20,7 @@ export default class ApiRules {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/rules/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/rules/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: Rule) {
         return this.api.post(`/rules`, data)

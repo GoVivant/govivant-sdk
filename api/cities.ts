@@ -20,7 +20,7 @@ export default class ApiCities {
     * Ex: { foo: 'bar' }
     */
     search(query: object) {
-        return this.api.get(`/cities/search?query=${JSON.stringify(query)}`)
+        return this.api.get(`/cities/search?query=${encodeURIComponent(JSON.stringify(query))}`)
     }
     create(data: City) {
         return this.api.post(`/cities`, data)
