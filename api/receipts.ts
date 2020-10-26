@@ -9,6 +9,6 @@ export default class ApiReceipts {
     }
 
     create(data: Object) {
-        return this.api.post(`/receipts`, data)
+        return this.api.post(`/receipts`, data, { headers: { 'Content-Type': 'multipart/form-data' } })
     }
 }
