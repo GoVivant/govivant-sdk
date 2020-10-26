@@ -14,6 +14,7 @@ import ApiRedeems from './api/redeems'
 import ApiRules from './api/rules'
 import ApiStores from './api/stores'
 import ApiTransactions from './api/transactions'
+import ApiReceipts from './api/receipts'
 
 export default class Govivant {
 
@@ -32,6 +33,7 @@ export default class Govivant {
     rules: ApiRules
     stores: ApiStores
     transactions: ApiTransactions
+    receipts: ApiReceipts
 
     constructor(api_key: string, dev: boolean) {
 
@@ -52,5 +54,6 @@ export default class Govivant {
         this.rules = new ApiRules(api_gvv)
         this.stores = new ApiStores(api_gvv)
         this.transactions = new ApiTransactions(api_gvv)
+        this.receipts = new ApiReceipts(api_gvv)
     }
 }
