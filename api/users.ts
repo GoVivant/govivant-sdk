@@ -9,8 +9,8 @@ export default class ApiUsers {
         this.api = api
     }
 
-    list() {
-        return this.api.get(`/users`)
+    list(page: number = 1, limit: number = 15) {
+        return this.api.get(`/users?page=${page}&limit=${limit}`)
     }
     view(id: string) {
         return this.api.get(`/users/${id}`)
@@ -19,8 +19,8 @@ export default class ApiUsers {
     * Filter results by any property, through a query.
     * Ex: { foo: 'bar' }
     */
-    search(query: object) {
-        return this.api.get(`/users/search?query=${encodeURIComponent(JSON.stringify(query))}`)
+    search(query: object, page: number = 1, limit: number = 15) {
+        return this.api.get(`/users/search?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}`)
     }
     create(data: User) {
         return this.api.post(`/users`, data)

@@ -9,8 +9,8 @@ export default class ApiTransactions {
         this.api = api
     }
 
-    list() {
-        return this.api.get(`/transactions`)
+    list(page: number = 1, limit: number = 15) {
+        return this.api.get(`/transactions?page=${page}&limit=${limit}`)
     }
     view(id: string) {
         return this.api.get(`/transactions/${id}`)
@@ -19,8 +19,8 @@ export default class ApiTransactions {
     * Filter results by any property, through a query.
     * Ex: { foo: 'bar' }
     */
-    search(query: object) {
-        return this.api.get(`/transactions/search?query=${encodeURIComponent(JSON.stringify(query))}`)
+    search(query: object, page: number = 1, limit: number = 15) {
+        return this.api.get(`/transactions/search?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}`)
     }
     create(data: Transaction) {
         return this.api.post(`/transactions`, data)

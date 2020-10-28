@@ -9,8 +9,8 @@ export default class ApiBusinesses {
         this.api = api
     }
 
-    list() {
-        return this.api.get(`/businesses`)
+    list(page: number = 1, limit: number = 15) {
+        return this.api.get(`/businesses?page=${page}&limit=${limit}`)
     }
     view(id: string) {
         return this.api.get(`/businesses/${id}`)
@@ -19,8 +19,8 @@ export default class ApiBusinesses {
     * Filter results by any property, through a query.
     * Ex: { foo: 'bar' }
     */
-    search(query: object) {
-        return this.api.get(`/businesses/search?query=${encodeURIComponent(JSON.stringify(query))}`)
+    search(query: object, page: number = 1, limit: number = 15) {
+        return this.api.get(`/businesses/search?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}`)
     }
     create(data: Business) {
         return this.api.post(`/businesses`, data)
