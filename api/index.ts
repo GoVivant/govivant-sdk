@@ -21,24 +21,24 @@ export default class ApiGvv {
     get(url: string, conf = {}) {
         return this.client.get(url, conf)
             .then(response => Promise.resolve(response))
-            .catch(error => Promise.reject(error))
+            .catch(error => Promise.reject(error.response))
     }
 
     delete(url: string, conf = {}) {
         return this.client.delete(url, conf)
             .then(response => Promise.resolve(response))
-            .catch(error => Promise.reject(error))
+            .catch(error => Promise.reject(error.response))
     }
 
     post(url: string, data = {}, conf = {}) {
         return this.client.post(url, data, conf)
             .then(response => Promise.resolve(response))
-            .catch(error => Promise.reject(error))
+            .catch(error => Promise.reject(error.response))
     }
 
     put(url: string, data = {}, conf = {}) {
         return this.client.put(url, data, conf)
             .then(response => Promise.resolve(response))
-            .catch(error => Promise.reject(error))
+            .catch(error => Promise.reject(error.response))
     }
 }

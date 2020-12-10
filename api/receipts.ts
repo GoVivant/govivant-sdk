@@ -8,7 +8,10 @@ export default class ApiReceipts {
         this.api = api
     }
 
-    create(data: Object) {
-        return this.api.post(`/receipts`, data, { headers: { 'Content-Type': 'multipart/form-data' } })
+    create_transaction(data: Object) {
+        return this.api.post(`/receipts/create_transaction`, data)
+    }
+    upload(data: Object) {
+        return this.api.post(`/receipts/upload`, data, { headers: { 'Content-Type': 'multipart/form-data' } })
     }
 }
