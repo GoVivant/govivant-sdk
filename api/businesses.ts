@@ -19,7 +19,7 @@ export default class ApiBusinesses {
     * Filter results by any property, through a query.
     * Ex: { foo: 'bar' }
     */
-    search(query: object, page: number = 1, limit: number = 15, populate: Array<string>, select: Array<string>) {
+    search(query: object, page: number = 1, limit: number = 15, populate: Array<string> = [], select: Array<string> = []) {
         return this.api.get(`/businesses/search?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}&populate=${populate.join(',')}&select=${select.join(',')}`)
     }
     create(data: Business) {
