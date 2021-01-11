@@ -1,15 +1,15 @@
 export default class Tag {
     name: string
     description: string
-    businesses_id: Array<string>
     images: string
+    rank: number
     enabled: boolean
 
-    constructor(name: string, description: string, images: string, enabled: boolean, businesses_id: Array<string>) {
+    constructor(name: string, description: string, images: string, enabled: boolean, rank: number) {
         this.name = name
         this.description = description
-        this.businesses_id = businesses_id
         this.images = images
+        this.rank = rank
         this.enabled = enabled
     }
 }

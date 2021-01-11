@@ -15,4 +15,7 @@ export default class ApiAuth {
     register(data: User) {
         return this.api.post(`/authentication/register`, data)
     }
+    generate_app_token(app_id: string) {
+        return this.api.post(`/authentication/generate-app-token`, { app_id })
+    }
 }

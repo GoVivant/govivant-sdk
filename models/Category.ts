@@ -1,4 +1,4 @@
-export default class Catefory {
+export default class Category {
     name: string
     type: string
     image: string

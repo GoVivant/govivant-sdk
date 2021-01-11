@@ -8,11 +8,15 @@ import ApiCities from './api/cities'
 import ApiCountries from './api/countries'
 import ApiCustomers from './api/customers'
 import ApiIntegrations from './api/integrations'
+import ApiInvoices from './api/invoices'
+import ApiLogs from './api/logs'
+import ApiPlans from './api/plans'
 import ApiPoints from './api/points'
 import ApiProducts from './api/products'
 import ApiRedeems from './api/redeems'
 import ApiRules from './api/rules'
 import ApiStores from './api/stores'
+import ApiSubproducts from './api/subproducts'
 import ApiTransactions from './api/transactions'
 import ApiReceipts from './api/receipts'
 
@@ -27,11 +31,15 @@ export default class Govivant {
     countries: ApiCountries
     customers: ApiCustomers
     integrations: ApiIntegrations
+    invoices: ApiInvoices
+    logs: ApiLogs
+    plans: ApiPlans
     points: ApiPoints
     products: ApiProducts
     redeems: ApiRedeems
     rules: ApiRules
     stores: ApiStores
+    subproducts: ApiSubproducts
     transactions: ApiTransactions
     receipts: ApiReceipts
 
@@ -48,11 +56,15 @@ export default class Govivant {
         this.countries = new ApiCountries(api_gvv)
         this.customers = new ApiCustomers(api_gvv)
         this.integrations = new ApiIntegrations(api_gvv)
+        this.invoices = new ApiInvoices(api_gvv)
+        this.logs = new ApiLogs(api_gvv)
+        this.plans = new ApiPlans(api_gvv)
         this.points = new ApiPoints(api_gvv)
         this.products = new ApiProducts(api_gvv)
         this.redeems = new ApiRedeems(api_gvv)
         this.rules = new ApiRules(api_gvv)
         this.stores = new ApiStores(api_gvv)
+        this.subproducts = new ApiSubproducts(api_gvv)
         this.transactions = new ApiTransactions(api_gvv)
         this.receipts = new ApiReceipts(api_gvv)
     }

@@ -19,8 +19,8 @@ export default class ApiCountries {
     * Filter results by any property, through a query.
     * Ex: { foo: 'bar' }
     */
-    search(query: object, page: number = 1, limit: number = 15) {
-        return this.api.get(`/countries/search?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}`)
+    search(query: object, page: number = 1, limit: number = 15, populate: Array<string> = [], select: Array<string> = []) {
+        return this.api.get(`/countries/search?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}&populate=${populate.join(',')}&select=${select.join(',')}`)
     }
     create(data: Country) {
         return this.api.post(`/countries`, data)

@@ -25,9 +25,10 @@ class Prize_Rule {
 export default class Rule {
     name: string
     app_id: string
-    active: boolean
+    enabled: boolean
     schedule: Array<Schedule>
     businesses_id: Array<string>
+    products_id: Array<string>
     currency: string
     type: string
     periods: string
@@ -40,9 +41,10 @@ export default class Rule {
     constructor(
         name: string,
         app_id: string,
-        active: boolean,
+        enabled: boolean,
         schedule: Array<Schedule>,
         businesses_id: Array<string>,
+        products_id: Array<string>,
         currency: string,
         type: string,
         periods: string,
@@ -54,9 +56,10 @@ export default class Rule {
     ) {
         this.name = name
         this.app_id = app_id
-        this.active = active
+        this.enabled = enabled
         this.schedule = schedule
         this.businesses_id = businesses_id
+        this.products_id = products_id
         this.currency = currency
         this.type = type
         this.periods = periods
