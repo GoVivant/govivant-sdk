@@ -1,8 +1,8 @@
 {
   "name": "govivant-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An API client to use GoVivant services",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "clean": "shx rm -rf dist/*",
     "build": "tsc --skipLibCheck",
