@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist",
+        "target": "es5",
+        "lib": [
+            "es5"
+        ],
+        "strictPropertyInitialization": false,
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "strict": true,
+        "declaration": true,
+        "noImplicitAny": false,
+        "allowJs": false,
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

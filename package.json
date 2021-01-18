@@ -1,10 +1,13 @@
 {
   "name": "govivant-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An API client to use GoVivant services",
-  "main": "index.ts",
+  "main": "./src/index.ts",
   "scripts": {
-    "test": "test"
+    "clean": "shx rm -rf dist/*",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prepack": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,12 @@
   },
   "homepage": "https://github.com/GoVivant/govivant-sdk#readme",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.20.0",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.167",
+    "@types/node": "^14.14.21",
+    "shx": "^0.3.3"
   }
 }
