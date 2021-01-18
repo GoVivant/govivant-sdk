@@ -5,7 +5,7 @@
   "main": "./src/index.ts",
   "scripts": {
     "clean": "shx rm -rf dist/*",
-    "build": "tsc",
+    "build": "tsc --skipLibCheck",
     "watch": "tsc --watch",
     "prepack": "npm run clean && npm run build"
   },
