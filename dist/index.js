@@ -25,8 +25,8 @@ var subproducts_1 = __importDefault(require("./api/subproducts"));
 var transactions_1 = __importDefault(require("./api/transactions"));
 var receipts_1 = __importDefault(require("./api/receipts"));
 var Govivant = /** @class */ (function () {
-    function Govivant(api_key, dev) {
-        var api_gvv = new api_1.default(api_key, dev);
+    function Govivant(api_key, dev, error_handler) {
+        var api_gvv = new api_1.default(api_key, dev, error_handler);
         this.auth = new auth_1.default(api_gvv);
         this.users = new users_1.default(api_gvv);
         this.tags = new tags_1.default(api_gvv);
