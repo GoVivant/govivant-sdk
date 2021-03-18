@@ -1,13 +1,27 @@
 export default class Integration {
     name: string
-    api_keys_id: Array<string>
-    apps_connected_id: string
+    url: string
+    support_email: string
+    type: string
+    country: string
+    rank: number
     enabled: boolean
 
-    constructor(name: string, api_keys_id: Array<string>, apps_connected_id: string, enabled: boolean) {
+    constructor(
+        name: string,
+        url: string,
+        support_email: string,
+        type: string,
+        country: string,
+        rank: number,
+        enabled: boolean
+    ) {
         this.name = name
-        this.api_keys_id = api_keys_id
-        this.apps_connected_id = apps_connected_id
+        this.url = url
+        this.support_email = support_email
+        this.type = type
+        this.country = country
+        this.rank = rank
         this.enabled = enabled
     }
 }

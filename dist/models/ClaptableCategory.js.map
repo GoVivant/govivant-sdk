@@ -1,0 +1,1 @@
+{"version":3,"file":"ClaptableCategory.js","sourceRoot":"","sources":["../../src/models/ClaptableCategory.ts"],"names":[],"mappings":";;AAAA;IAOI,2BACI,IAAY,EACZ,KAAa,EACb,IAAY,EACZ,WAAmB;QAEnB,IAAI,CAAC,IAAI,GAAG,IAAI,CAAA;QAChB,IAAI,CAAC,KAAK,GAAG,KAAK,CAAA;QAClB,IAAI,CAAC,IAAI,GAAG,IAAI,CAAA;QAChB,IAAI,CAAC,WAAW,GAAG,WAAW,CAAA;IAClC,CAAC;IACL,wBAAC;AAAD,CAAC,AAlBD,IAkBC"}

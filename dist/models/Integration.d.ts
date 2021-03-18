@@ -1,7 +1,10 @@
 export default class Integration {
     name: string;
-    api_keys_id: Array<string>;
-    apps_connected_id: string;
+    url: string;
+    support_email: string;
+    type: string;
+    country: string;
+    rank: number;
     enabled: boolean;
-    constructor(name: string, api_keys_id: Array<string>, apps_connected_id: string, enabled: boolean);
+    constructor(name: string, url: string, support_email: string, type: string, country: string, rank: number, enabled: boolean);
 }

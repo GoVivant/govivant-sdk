@@ -1,0 +1,33 @@
+export default class Order {
+    payment_order_id: Array<string>;
+    business_id: string;
+    customer_id: string;
+    products_id: Array<string>;
+    extras_id: Array<string>;
+    options_id: Array<string>;
+    suboptions_id: Array<string>;
+    delivery_zone_id: string;
+    offer_id: string;
+    delivery_datetime: Date;
+    order_code: number;
+    delivery_type: number;
+    discount: number;
+    service_fee: number;
+    tax_type: number;
+    tax: number;
+    subtotal: number;
+    tax_total: number;
+    total: number;
+    comment: string;
+    tip: number;
+    taxes: number;
+    delivery_tip: string;
+    delivery_price: number;
+    pay_data: Object;
+    cash: string;
+    location: Object;
+    products: Object;
+    customer: Object;
+    status: number;
+    constructor(payment_order_id: Array<string>, business_id: string, customer_id: string, products_id: Array<string>, extras_id: Array<string>, options_id: Array<string>, suboptions_id: Array<string>, delivery_zone_id: string, offer_id: string, delivery_datetime: Date, order_code: number, delivery_type: number, discount: number, service_fee: number, tax_type: number, tax: number, subtotal: number, tax_total: number, total: number, comment: string, tip: number, taxes: number, delivery_tip: string, delivery_price: number, pay_data: Object, cash: string, location: Object, products: Object, customer: Object, status: number);
+}

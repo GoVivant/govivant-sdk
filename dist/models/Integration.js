@@ -1,10 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Integration = /** @class */ (function () {
-    function Integration(name, api_keys_id, apps_connected_id, enabled) {
+    function Integration(name, url, support_email, type, country, rank, enabled) {
         this.name = name;
-        this.api_keys_id = api_keys_id;
-        this.apps_connected_id = apps_connected_id;
+        this.url = url;
+        this.support_email = support_email;
+        this.type = type;
+        this.country = country;
+        this.rank = rank;
         this.enabled = enabled;
     }
     return Integration;
