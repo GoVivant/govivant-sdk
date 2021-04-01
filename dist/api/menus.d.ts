@@ -3,7 +3,7 @@ import Menu from '../models/Menu';
 export default class ApiMenus {
     private api;
     constructor(api: ApiClient);
-    list(page?: number, limit?: number): any;
+    list(business_id: string, page?: number, limit?: number): any;
     view(id: string): any;
     /**
     * Filter results by any property, through a query.

@@ -10,7 +10,7 @@ var ApiClaptableProducts = /** @class */ (function () {
         return this.api.get("/claptable/products/" + business + "?page=" + page + "&limit=" + limit);
     };
     ApiClaptableProducts.prototype.view = function (id) {
-        return this.api.get("/claptable/products/" + id);
+        return this.api.get("/claptable/products/view/" + id);
     };
     /**
     * Filter results by any property, through a query.

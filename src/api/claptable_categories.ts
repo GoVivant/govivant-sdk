@@ -13,7 +13,7 @@ export default class ApiClaptableCategories {
         return this.api.get(`/claptable/categories/${business}?page=${page}&limit=${limit}`)
     }
     view(id: string) {
-        return this.api.get(`/claptable/categories/${id}`)
+        return this.api.get(`/claptable/categories/view/${id}`)
     }
     /**
     * Filter results by any property, through a query.

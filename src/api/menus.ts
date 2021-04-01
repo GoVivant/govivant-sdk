@@ -9,11 +9,11 @@ export default class ApiMenus {
         this.api = api
     }
 
-    list(page: number = 1, limit: number = 15) {
-        return this.api.get(`/claptable/menus?page=${page}&limit=${limit}`)
+    list(business_id: string, page: number = 1, limit: number = 15) {
+        return this.api.get(`/claptable/menus/${business_id}?page=${page}&limit=${limit}`)
     }
     view(id: string) {
-        return this.api.get(`/claptable/menus/${id}`)
+        return this.api.get(`/claptable/menus/view/${id}`)
     }
     /**
     * Filter results by any property, through a query.

@@ -10,7 +10,7 @@ var ApiOrders = /** @class */ (function () {
         return this.api.get("/claptable/orders/" + business + "?page=" + page + "&limit=" + limit);
     };
     ApiOrders.prototype.view = function (id) {
-        return this.api.get("/claptable/orders/" + id);
+        return this.api.get("/claptable/orders/view/" + id);
     };
     /**
     * Filter results by any property, through a query.

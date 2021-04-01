@@ -4,13 +4,13 @@ var ApiMenus = /** @class */ (function () {
     function ApiMenus(api) {
         this.api = api;
     }
-    ApiMenus.prototype.list = function (page, limit) {
+    ApiMenus.prototype.list = function (business_id, page, limit) {
         if (page === void 0) { page = 1; }
         if (limit === void 0) { limit = 15; }
-        return this.api.get("/claptable/menus?page=" + page + "&limit=" + limit);
+        return this.api.get("/claptable/menus/" + business_id + "?page=" + page + "&limit=" + limit);
     };
     ApiMenus.prototype.view = function (id) {
-        return this.api.get("/claptable/menus/" + id);
+        return this.api.get("/claptable/menus/view/" + id);
     };
     /**
     * Filter results by any property, through a query.

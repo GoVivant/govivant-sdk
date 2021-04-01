@@ -13,7 +13,7 @@ export default class ApiOrders {
         return this.api.get(`/claptable/orders/${business}?page=${page}&limit=${limit}`)
     }
     view(id: string) {
-        return this.api.get(`/claptable/orders/${id}`)
+        return this.api.get(`/claptable/orders/view/${id}`)
     }
     /**
     * Filter results by any property, through a query.

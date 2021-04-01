@@ -10,7 +10,7 @@ var ApiClaptableCategories = /** @class */ (function () {
         return this.api.get("/claptable/categories/" + business + "?page=" + page + "&limit=" + limit);
     };
     ApiClaptableCategories.prototype.view = function (id) {
-        return this.api.get("/claptable/categories/" + id);
+        return this.api.get("/claptable/categories/view/" + id);
     };
     /**
     * Filter results by any property, through a query.
