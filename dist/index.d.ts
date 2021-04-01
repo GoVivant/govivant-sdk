@@ -1,4 +1,5 @@
 import ApiAuth from './api/auth';
+import ApiAddresses from './api/addresses';
 import ApiAllergies from './api/allergies';
 import ApiCards from './api/cards';
 import ApiClaptableCategories from './api/claptable_categories';
@@ -37,6 +38,7 @@ import ApiTransactions from './api/transactions';
 import ApiReceipts from './api/receipts';
 export default class Govivant {
     auth: ApiAuth;
+    addresses: ApiAddresses;
     allergies: ApiAllergies;
     cards: ApiCards;
     claptable_categories: ApiClaptableCategories;

@@ -1,5 +1,6 @@
 import ApiGvv from './api'
 import ApiAuth from './api/auth'
+import ApiAddresses from './api/addresses'
 import ApiAllergies from './api/allergies'
 import ApiCards from './api/cards'
 import ApiClaptableCategories from './api/claptable_categories'
@@ -40,6 +41,7 @@ import ApiReceipts from './api/receipts'
 export default class Govivant {
 
     auth: ApiAuth
+    addresses: ApiAddresses
     allergies: ApiAllergies
     cards: ApiCards
     claptable_categories: ApiClaptableCategories
@@ -82,6 +84,7 @@ export default class Govivant {
         const api_gvv = new ApiGvv(api_key, dev, error_handler, clap)
 
         this.auth = new ApiAuth(api_gvv)
+        this.addresses = new ApiAddresses(api_gvv)
         this.allergies = new ApiAllergies(api_gvv)
         this.cards = new ApiCards(api_gvv)
         this.claptable_categories = new ApiClaptableCategories(api_gvv)

@@ -1,10 +1,10 @@
 import ApiClient from '.';
-import Card from '../models/Card';
-export default class ApiCards {
+import Address from '../models/Address';
+export default class ApiAddresses {
     private api;
     constructor(api: ApiClient);
     list(customer_id: string, page?: number, limit?: number): any;
-    create(customer_id: string, data: Card): any;
-    update(id: string, data: Card): any;
+    create(data: Address): any;
+    update(id: string, data: Address): any;
     remove(id: string): any;
 }

@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var api_1 = __importDefault(require("./api"));
 var auth_1 = __importDefault(require("./api/auth"));
+var addresses_1 = __importDefault(require("./api/addresses"));
 var allergies_1 = __importDefault(require("./api/allergies"));
 var cards_1 = __importDefault(require("./api/cards"));
 var claptable_categories_1 = __importDefault(require("./api/claptable_categories"));
@@ -45,6 +46,7 @@ var Govivant = /** @class */ (function () {
     function Govivant(api_key, dev, error_handler, clap) {
         var api_gvv = new api_1.default(api_key, dev, error_handler, clap);
         this.auth = new auth_1.default(api_gvv);
+        this.addresses = new addresses_1.default(api_gvv);
         this.allergies = new allergies_1.default(api_gvv);
         this.cards = new cards_1.default(api_gvv);
         this.claptable_categories = new claptable_categories_1.default(api_gvv);

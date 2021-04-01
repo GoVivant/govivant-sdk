@@ -9,26 +9,16 @@ export default class ApiCards {
         this.api = api
     }
 
-    list(page: number = 1, limit: number = 15) {
-        return this.api.get(`/claptable/cards?page=${page}&limit=${limit}`)
+    list(customer_id: string, page: number = 1, limit: number = 15) {
+        return this.api.get(`/claptable/tokens/cards/${customer_id}?page=${page}&limit=${limit}`)
     }
-    view(id: string) {
-        return this.api.get(`/claptable/cards/${id}`)
-    }
-    /**
-    * Filter results by any property, through a query.
-    * Ex: { foo: 'bar' }
-    */
-    search(query: object, page: number = 1, limit: number = 15, populate: Array<string> = [], select: Array<string> = []) {
-        return this.api.get(`/claptable/cards/search?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}&populate=${populate.join(',')}&select=${select.join(',')}`)
-    }
-    create(data: Card) {
-        return this.api.post(`/claptable/cards`, data)
+    create(customer_id: string, data: Card) {
+        return this.api.post(`/claptable/tokens/cards/${customer_id}`, data)
     }
     update(id: string, data: Card) {
-        return this.api.put(`/claptable/cards/${id}`, data)
+        return this.api.put(`/claptable/tokens/cards/${id}`, data)
     }
     remove(id: string) {
-        return this.api.delete(`/claptable/cards/${id}`)
+        return this.api.delete(`/claptable/tokens/cards/${id}`)
     }
 }
