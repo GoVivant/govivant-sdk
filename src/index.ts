@@ -77,9 +77,9 @@ export default class Govivant {
     transactions: ApiTransactions
     receipts: ApiReceipts
 
-    constructor(api_key: string, dev: boolean, error_handler) {
+    constructor(api_key: string, dev: boolean, error_handler, clap: boolean) {
 
-        const api_gvv = new ApiGvv(api_key, dev, error_handler)
+        const api_gvv = new ApiGvv(api_key, dev, error_handler, clap)
 
         this.auth = new ApiAuth(api_gvv)
         this.allergies = new ApiAllergies(api_gvv)

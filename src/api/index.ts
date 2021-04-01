@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-function getClient(api_key: string, dev: boolean, error_handler = () => { }) {
+function getClient(api_key: string, dev: boolean, error_handler = () => { }, clap) {
     const client = axios.create({
-        baseURL: `https://govivant-api${dev ? '-dev' : ''}.herokuapp.com`,
+        baseURL: `https://govivant-api${dev ? clap ? '-dev-clap' : '-dev' : ''}.herokuapp.com`,
         headers: {
             'Authorization': `Bearer ${api_key}`,
         }
@@ -20,8 +20,8 @@ export default class ApiGvv {
 
     private client: any
 
-    constructor(api_key: string, dev: boolean, error_handler) {
-        this.client = getClient(api_key, dev, error_handler)
+    constructor(api_key: string, dev: boolean, error_handler, clap: boolean) {
+        this.client = getClient(api_key, dev, error_handler, clap)
     }
 
     get(url: string, conf = {}) {

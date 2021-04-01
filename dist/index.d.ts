@@ -73,5 +73,5 @@ export default class Govivant {
     subproducts: ApiSubproducts;
     transactions: ApiTransactions;
     receipts: ApiReceipts;
-    constructor(api_key: string, dev: boolean, error_handler: any);
+    constructor(api_key: string, dev: boolean, error_handler: any, clap: boolean);
 }

@@ -4,10 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = __importDefault(require("axios"));
-function getClient(api_key, dev, error_handler) {
+function getClient(api_key, dev, error_handler, clap) {
     if (error_handler === void 0) { error_handler = function () { }; }
     var client = axios_1.default.create({
-        baseURL: "https://govivant-api" + (dev ? '-dev' : '') + ".herokuapp.com",
+        baseURL: "https://govivant-api" + (dev ? clap ? '-dev-clap' : '-dev' : '') + ".herokuapp.com",
         headers: {
             'Authorization': "Bearer " + api_key,
         }
@@ -16,8 +16,8 @@ function getClient(api_key, dev, error_handler) {
     return client;
 }
 var ApiGvv = /** @class */ (function () {
-    function ApiGvv(api_key, dev, error_handler) {
-        this.client = getClient(api_key, dev, error_handler);
+    function ApiGvv(api_key, dev, error_handler, clap) {
+        this.client = getClient(api_key, dev, error_handler, clap);
     }
     ApiGvv.prototype.get = function (url, conf) {
         if (conf === void 0) { conf = {}; }
