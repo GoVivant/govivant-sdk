@@ -15,13 +15,6 @@ export default class ApiDeliveryZones {
     view(id: string) {
         return this.api.get(`/claptable/delivery_zones/${id}`)
     }
-    /**
-    * Filter results by any property, through a query.
-    * Ex: { foo: 'bar' }
-    */
-    search(query: object, page: number = 1, limit: number = 15, populate: Array<string> = [], select: Array<string> = []) {
-        return this.api.get(`/claptable/delivery_zones/search?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}&populate=${populate.join(',')}&select=${select.join(',')}`)
-    }
     create(data: DeliveryZone) {
         return this.api.post(`/claptable/delivery_zones`, data)
     }
