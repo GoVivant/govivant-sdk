@@ -12,19 +12,14 @@ var ApiPaymentOrders = /** @class */ (function () {
     ApiPaymentOrders.prototype.view = function (id) {
         return this.api.get("/claptable/payment_orders/" + id);
     };
-    /**
-    * Filter results by any property, through a query.
-    * Ex: { foo: 'bar' }
-    */
-    ApiPaymentOrders.prototype.search = function (query, page, limit, populate, select) {
-        if (page === void 0) { page = 1; }
-        if (limit === void 0) { limit = 15; }
-        if (populate === void 0) { populate = []; }
-        if (select === void 0) { select = []; }
-        return this.api.get("/claptable/payment_orders/search?query=" + encodeURIComponent(JSON.stringify(query)) + "&page=" + page + "&limit=" + limit + "&populate=" + populate.join(',') + "&select=" + select.join(','));
-    };
     ApiPaymentOrders.prototype.create = function (data) {
         return this.api.post("/claptable/payment_orders", data);
+    };
+    ApiPaymentOrders.prototype.create_zoop = function (data) {
+        return this.api.post("/claptable/payment_orders/zoop", data);
+    };
+    ApiPaymentOrders.prototype.create_stripe = function (data) {
+        return this.api.post("/claptable/payment_orders/stripe", data);
     };
     ApiPaymentOrders.prototype.update = function (id, data) {
         return this.api.put("/claptable/payment_orders/" + id, data);

@@ -15,15 +15,14 @@ export default class ApiPaymentOrders {
     view(id: string) {
         return this.api.get(`/claptable/payment_orders/${id}`)
     }
-    /**
-    * Filter results by any property, through a query.
-    * Ex: { foo: 'bar' }
-    */
-    search(query: object, page: number = 1, limit: number = 15, populate: Array<string> = [], select: Array<string> = []) {
-        return this.api.get(`/claptable/payment_orders/search?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}&populate=${populate.join(',')}&select=${select.join(',')}`)
-    }
     create(data: PaymentOrder) {
         return this.api.post(`/claptable/payment_orders`, data)
+    }
+    create_zoop(data: PaymentOrder) {
+        return this.api.post(`/claptable/payment_orders/zoop`, data)
+    }
+    create_stripe(data: PaymentOrder) {
+        return this.api.post(`/claptable/payment_orders/stripe`, data)
     }
     update(id: string, data: PaymentOrder) {
         return this.api.put(`/claptable/payment_orders/${id}`, data)
