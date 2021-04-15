@@ -22,6 +22,9 @@ export default class ApiBusinesses {
     search(query: object, page: number = 1, limit: number = 15, populate: Array<string> = [], select: Array<string> = []) {
         return this.api.get(`/businesses/search?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}&populate=${populate.join(',')}&select=${select.join(',')}`)
     }
+    by_app(whitelabelId: string, query: object, page: number = 1, limit: number = 15, populate: Array<string> = [], select: Array<string> = []) {
+        return this.api.get(`/businesses/by_app/${whitelabelId}?query=${encodeURIComponent(JSON.stringify(query))}&page=${page}&limit=${limit}&populate=${populate.join(',')}&select=${select.join(',')}`)
+    }
     create(data: Business) {
         return this.api.post(`/businesses`, data)
     }

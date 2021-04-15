@@ -15,6 +15,9 @@ export default class ApiWhitelabels {
     view(id: string) {
         return this.api.get(`/claptable/whitelabels/${id}`)
     }
+    by_bundle_id(bundle_id: string) {
+        return this.api.get(`/claptable/whitelabels/by_bundle_id/${bundle_id}`)
+    }
     /**
     * Filter results by any property, through a query.
     * Ex: { foo: 'bar' }

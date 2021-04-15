@@ -5,6 +5,7 @@ export default class ApiWhitelabels {
     constructor(api: ApiClient);
     list(page?: number, limit?: number): any;
     view(id: string): any;
+    by_bundle_id(bundle_id: string): any;
     /**
     * Filter results by any property, through a query.
     * Ex: { foo: 'bar' }

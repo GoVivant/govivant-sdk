@@ -1,9 +1,3 @@
-class Slides {
-    title: string
-    description: string
-    image: string
-}
-
 class OneSignal {
     app_id: string
     api_key: string
@@ -17,9 +11,7 @@ export default class Whitelabel {
     slug: string
     logo_white: string
     logo_dark: string
-    slides: Slides
-    wide_business_image: string
-    primary_color: string
+    accent_color: string
     support_email: string
     support_url: string
     instagram: string
@@ -37,9 +29,7 @@ export default class Whitelabel {
         slug: string,
         logo_white: string,
         logo_dark: string,
-        slides: Slides,
-        wide_business_image: string,
-        primary_color: string,
+        accent_color: string,
         support_email: string,
         support_url: string,
         instagram: string,
@@ -56,9 +46,7 @@ export default class Whitelabel {
         this.slug = slug
         this.logo_white = logo_white
         this.logo_dark = logo_dark
-        this.slides = slides
-        this.wide_business_image = wide_business_image
-        this.primary_color = primary_color
+        this.accent_color = accent_color
         this.support_email = support_email
         this.support_url = support_url
         this.instagram = instagram

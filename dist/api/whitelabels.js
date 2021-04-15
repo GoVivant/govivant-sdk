@@ -12,6 +12,9 @@ var ApiWhitelabels = /** @class */ (function () {
     ApiWhitelabels.prototype.view = function (id) {
         return this.api.get("/claptable/whitelabels/" + id);
     };
+    ApiWhitelabels.prototype.by_bundle_id = function (bundle_id) {
+        return this.api.get("/claptable/whitelabels/by_bundle_id/" + bundle_id);
+    };
     /**
     * Filter results by any property, through a query.
     * Ex: { foo: 'bar' }

@@ -23,6 +23,13 @@ var ApiBusinesses = /** @class */ (function () {
         if (select === void 0) { select = []; }
         return this.api.get("/businesses/search?query=" + encodeURIComponent(JSON.stringify(query)) + "&page=" + page + "&limit=" + limit + "&populate=" + populate.join(',') + "&select=" + select.join(','));
     };
+    ApiBusinesses.prototype.by_app = function (whitelabelId, query, page, limit, populate, select) {
+        if (page === void 0) { page = 1; }
+        if (limit === void 0) { limit = 15; }
+        if (populate === void 0) { populate = []; }
+        if (select === void 0) { select = []; }
+        return this.api.get("/businesses/by_app/" + whitelabelId + "?query=" + encodeURIComponent(JSON.stringify(query)) + "&page=" + page + "&limit=" + limit + "&populate=" + populate.join(',') + "&select=" + select.join(','));
+    };
     ApiBusinesses.prototype.create = function (data) {
         return this.api.post("/businesses", data);
     };
