@@ -7,13 +7,13 @@ var ApiWhitelabels = /** @class */ (function () {
     ApiWhitelabels.prototype.list = function (page, limit) {
         if (page === void 0) { page = 1; }
         if (limit === void 0) { limit = 15; }
-        return this.api.get("/claptable/whitelabels?page=" + page + "&limit=" + limit);
+        return this.api.get("/whitelabels?page=" + page + "&limit=" + limit);
     };
     ApiWhitelabels.prototype.view = function (id) {
-        return this.api.get("/claptable/whitelabels/" + id);
+        return this.api.get("/whitelabels/" + id);
     };
     ApiWhitelabels.prototype.by_bundle_id = function (bundle_id) {
-        return this.api.get("/claptable/whitelabels/by_bundle_id/" + bundle_id);
+        return this.api.get("/whitelabels/by_bundle_id/" + bundle_id);
     };
     /**
     * Filter results by any property, through a query.
@@ -24,16 +24,16 @@ var ApiWhitelabels = /** @class */ (function () {
         if (limit === void 0) { limit = 15; }
         if (populate === void 0) { populate = []; }
         if (select === void 0) { select = []; }
-        return this.api.get("/claptable/whitelabels/search?query=" + encodeURIComponent(JSON.stringify(query)) + "&page=" + page + "&limit=" + limit + "&populate=" + populate.join(',') + "&select=" + select.join(','));
+        return this.api.get("/whitelabels/search?query=" + encodeURIComponent(JSON.stringify(query)) + "&page=" + page + "&limit=" + limit + "&populate=" + populate.join(',') + "&select=" + select.join(','));
     };
     ApiWhitelabels.prototype.create = function (data) {
-        return this.api.post("/claptable/whitelabels", data);
+        return this.api.post("/whitelabels", data);
     };
     ApiWhitelabels.prototype.update = function (id, data) {
-        return this.api.put("/claptable/whitelabels/" + id, data);
+        return this.api.put("/whitelabels/" + id, data);
     };
     ApiWhitelabels.prototype.remove = function (id) {
-        return this.api.delete("/claptable/whitelabels/" + id);
+        return this.api.delete("/whitelabels/" + id);
     };
     return ApiWhitelabels;
 }());
