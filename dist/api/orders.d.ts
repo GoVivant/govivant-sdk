@@ -12,5 +12,6 @@ export default class ApiOrders {
     search(query: object, page?: number, limit?: number, populate?: Array<string>, select?: Array<string>): any;
     create(data: Order): any;
     update(id: string, data: Order): any;
+    refund(id: string): any;
     remove(id: string): any;
 }

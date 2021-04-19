@@ -28,6 +28,9 @@ export default class ApiOrders {
     update(id: string, data: Order) {
         return this.api.put(`/claptable/orders/${id}`, data)
     }
+    refund(id: string) {
+        return this.api.delete(`/claptable/orders/refund/${id}`)
+    }
     remove(id: string) {
         return this.api.delete(`/claptable/orders/${id}`)
     }
