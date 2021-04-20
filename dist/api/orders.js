@@ -30,7 +30,7 @@ var ApiOrders = /** @class */ (function () {
         return this.api.put("/claptable/orders/" + id, data);
     };
     ApiOrders.prototype.refund = function (id) {
-        return this.api.delete("/claptable/orders/refund/" + id);
+        return this.api.post("/claptable/orders/refund/" + id);
     };
     ApiOrders.prototype.remove = function (id) {
         return this.api.delete("/claptable/orders/" + id);
