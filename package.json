@@ -1,6 +1,6 @@
 {
   "name": "govivant-sdk",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "An API client to use GoVivant services",
   "main": "./dist/index.js",
   "scripts": {

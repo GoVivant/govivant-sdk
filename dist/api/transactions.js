@@ -10,7 +10,7 @@ var ApiTransactions = /** @class */ (function () {
         return this.api.get("/transactions?page=" + page + "&limit=" + limit);
     };
     ApiTransactions.prototype.view = function (id) {
-        return this.api.get("/transactions/" + id);
+        return this.api.get("/transactions/view/" + id);
     };
     /**
     * Filter results by any property, through a query.

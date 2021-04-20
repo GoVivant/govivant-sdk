@@ -13,7 +13,7 @@ export default class ApiTransactions {
         return this.api.get(`/transactions?page=${page}&limit=${limit}`)
     }
     view(id: string) {
-        return this.api.get(`/transactions/${id}`)
+        return this.api.get(`/transactions/view/${id}`)
     }
     /**
     * Filter results by any property, through a query.
