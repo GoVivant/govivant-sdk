@@ -9,8 +9,8 @@ export default class ApiOffers {
         this.api = api
     }
 
-    list(page: number = 1, limit: number = 15) {
-        return this.api.get(`/claptable/offers?page=${page}&limit=${limit}`)
+    list(business_id: string, page: number = 1, limit: number = 15) {
+        return this.api.get(`/claptable/offers/${business_id}?page=${page}&limit=${limit}`)
     }
     view(id: string) {
         return this.api.get(`/claptable/offers/${id}`)

@@ -4,10 +4,10 @@ var ApiOffers = /** @class */ (function () {
     function ApiOffers(api) {
         this.api = api;
     }
-    ApiOffers.prototype.list = function (page, limit) {
+    ApiOffers.prototype.list = function (business_id, page, limit) {
         if (page === void 0) { page = 1; }
         if (limit === void 0) { limit = 15; }
-        return this.api.get("/claptable/offers?page=" + page + "&limit=" + limit);
+        return this.api.get("/claptable/offers/" + business_id + "?page=" + page + "&limit=" + limit);
     };
     ApiOffers.prototype.view = function (id) {
         return this.api.get("/claptable/offers/" + id);
